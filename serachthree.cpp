@@ -80,6 +80,12 @@ void search(string element, Node *&parent, Node *&currentNode)
 
 void inorder(Node *ptr)
     {
+        if (root == NULL)
+        {
+            cout << "Tree is empty" << endl;
+            return;
+        }
+
         
     }
 };
