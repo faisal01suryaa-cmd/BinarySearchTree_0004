@@ -31,7 +31,31 @@ class BinaryTree
     // Insert a node in the binary search tree
     void insert(string element)
     {
-        
+        Node *newNode = new Node(element, NULL, NULL);
+
+        newNode->info = element;
+        newNode->leftchild = NULL;
+        newNode->rightchild = NULL;
+
+        Node *parent = NULL;
+        Node *currentNode = NULL;
+
+        serach(element, parent, currentNode);
+
+        if (parent == NULL)
+        {
+            root = newNode;
+            return;
+        }
+
+        if (element < parent->info)
+        {
+            parent->leftchild = newNode;
+        }
+        else if (element > parent->info)
+        {
+            parent->rightchild = newNode;
+        }
     }
 
 };
