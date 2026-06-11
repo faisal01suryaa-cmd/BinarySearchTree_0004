@@ -40,7 +40,7 @@ class BinaryTree
         Node *parent = NULL;
         Node *currentNode = NULL;
 
-        serach(element, parent, currentNode);
+        search(element, parent, currentNode);
 
         if (parent == NULL)
         {
@@ -57,10 +57,22 @@ class BinaryTree
             parent->rightchild = newNode;
         }
     }
-};
 //this function seraches the current node of the specified node
 //as well as the current node of its parent
 void search(string element, Node *&parent, Node *&currentNode)
 {
-    
+    currentNode = root;
+    parent = NULL;
+
+    while (currentNode != NULL && currentNode->info != element)
+        {
+            parent = currentNode;
+
+            if (element < currentNode->info)
+                currentNode = currentNode->leftchild;
+            else
+                currentNode = currentNode->rightchild;
+        }
+
+
 }
