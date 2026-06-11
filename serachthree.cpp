@@ -57,5 +57,10 @@ class BinaryTree
             parent->rightchild = newNode;
         }
     }
-
 };
+//this function seraches the current node of the specified node
+//as well as the current node of its parent
+void search(string element, Node *&parent, Node *&currentNode)
+{
+    
+}
