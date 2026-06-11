@@ -110,4 +110,23 @@ void preorder(Node *ptr)
         }
 
 }
+
+ void postorder(Node *ptr)
+    {
+        // Performs the postoreder traversal of the tree
+
+        if (root == NULL)
+        {
+            cout << "Tree is empty" << endl;
+            return;
+        }
+
+        if (ptr != NULL)
+        {
+            postorder(ptr->leftchild);
+            postorder(ptr->rightchild);
+            cout << ptr->info << " ";
+        }
+    }
+
 };
