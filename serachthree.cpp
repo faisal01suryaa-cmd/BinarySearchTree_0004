@@ -93,4 +93,9 @@ void inorder(Node *ptr)
             inorder(ptr->rightchild);
         }
     }
+
+void preorder(Node *ptr)
+{
+    
+}
 };
